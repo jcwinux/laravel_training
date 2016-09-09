@@ -16,5 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('blade', function () {
-    return view('child');
+    return view('child',['nombre'=>'Juan Carlos',
+				'apellido'=>'Rocafuerte',
+				'ciudades'=>array('Guayaquil'=>'Guayas','Quito'=>'Pichincha','Cuenca'=>'Azuay')]);
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/hello', 'HelloWorld@hello');
+Route::get('/page1', 'Septiembre@page_one');
+Route::get('/page2', 'Septiembre@page_two');

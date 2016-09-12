@@ -26,3 +26,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/hello', 'HelloWorld@hello');
 Route::get('/page1', 'Septiembre@page_one');
 Route::get('/page2', 'Septiembre@page_two');
+Route::get('/first','Lunes@principal');
+Route::get('/cards','CardsController@index');
+Route::get('/cards/{card}','CardsController@show');
